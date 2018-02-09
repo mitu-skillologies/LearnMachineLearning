@@ -12,3 +12,8 @@ Here you'll find Material you need to get started with Machine Learning with Pyt
 
 > "This repository can be cloned / edited and redistributed under Open Source Licence. Feel Free to Contribute with 
 more Algorithms & Related Tricks"
+
+## SETUP
+Please follow the [link](http://mitu.co.in/py-ml-presentations/) to download the Presentations, that'll help you setup the eco-system required to run and visualise these programs
+
+##### Developer: Tejas Rawal, R&D at MITU Skillologies
