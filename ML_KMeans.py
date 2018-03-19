@@ -8,7 +8,7 @@ import pandas as pd
 # Importing the dataset
 dataset = pd.read_csv('Mall_Customers.csv')
 X = dataset.iloc[:, [3, 4]].values
-# y = dataset.iloc[:, 3].values
+y = dataset.iloc[:, 3].values
 
 # Splitting the dataset into the Training set and Test set
 """from sklearn.cross_validation import train_test_split
