@@ -1,5 +1,4 @@
-# LET US IMPORT THE LIBRARIES!
-# Start typing these
+# Data Pre-Processing
 # IMPORT LIBRARIES
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,8 +9,8 @@ dataset = pd.read_csv("LinearRegression/Data.csv")
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
 
-print("FIRST X ___\n",X)
-print("FIRST y ___\n",y)
+print("FIRST X ___\n", X)
+print("FIRST y ___\n", y)
 
 # Taking care of Missing Data
 from sklearn.preprocessing import Imputer
