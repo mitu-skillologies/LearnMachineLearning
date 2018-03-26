@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Importing the Dataset
-dataset = pd.read_csv("Restaurant_Reviews.tsv", delimiter='\t', quoting=3)
+dataset = pd.read_csv("5_Natural_Language_Processing/Restaurant_Reviews.tsv", delimiter='\t', quoting=3)
 # We can have Double Quotes, Commas but Tab is best! also we are ignoring double quotes
 
 # Cleaning the Texts

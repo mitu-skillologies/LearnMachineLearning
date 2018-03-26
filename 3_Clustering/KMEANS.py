@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Import Mall Dataset
-dataset = pd.read_csv('Mall_Customers.csv')
+dataset = pd.read_csv('3_Clustering/Mall_Customers.csv')
 # Clients that subscribe to Membership card
 # Maintains the Purchase history
 # Score is Dependent on INCOME,
