@@ -32,11 +32,12 @@ for i in range(0, dataset.__len__()):
 
 # Creating the Bag Of Words Model
 from sklearn.feature_extraction.text import CountVectorizer
-cv = CountVectorizer(max_features=1500)
+cv = CountVectorizer(max_features=1541)
 
 # Sparse Matrix -> CV
 X = cv.fit_transform(corpus).toarray()
 y = dataset.iloc[:, -1].values
+key_book = cv.vocabulary_
 
 # Splitting Data into Training & Testing
 from sklearn.model_selection import train_test_split
@@ -51,5 +52,10 @@ classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 
 # Making the Confusion Matrix
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 cm = confusion_matrix(y_test, y_pred)
+prf = precision_recall_fscore_support(y_pred=y_pred, y_true=y_test, average='macro')
+print(prf)
+
+prf = precision_recall_fscore_support(y_pred=y_pred, y_true=y_test, average='macro')
+print('Precision:', prf[0]*100, '%', '\nRecall', prf[1]*100, '%', '\nF1 Score:', prf[2]*100, '%')

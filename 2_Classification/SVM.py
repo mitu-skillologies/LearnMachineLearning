@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # IMPORTING DATASET
-dataset = pd.read_csv("2_Classification/Social_Network_Ads.csv")
+dataset = pd.read_csv("Social_Network_Ads.csv")
 X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values
 
@@ -49,7 +49,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('SVM (Test set)')
+plt.title('SVM (Train set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()

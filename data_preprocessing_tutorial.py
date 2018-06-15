@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # IMPORTING DATASET
-dataset = pd.read_csv("LinearRegression/Data.csv")
+dataset = pd.read_csv("Data.csv")
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 3].values
 
@@ -15,7 +15,7 @@ print("FIRST y ___\n", y)
 # Taking care of Missing Data
 from sklearn.preprocessing import Imputer
 
-imputer = Imputer(missing_values= 'NaN', strategy='mean', axis = 0)
+imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
 imputer1 = imputer.fit(X[:, 1:3])
 X[:, 1:3] = imputer.transform(X[:, 1:3])
 
@@ -34,7 +34,7 @@ print("TRANSFORMED X____\n",X)
 
 # Solution
 # COUNTRY
-onehotencoder = OneHotEncoder(categorical_features= [0])
+onehotencoder = OneHotEncoder(categorical_features=[0])
 X = onehotencoder.fit_transform(X).toarray()
 # PURCHASE
 labelencoder_y = LabelEncoder()
@@ -43,8 +43,8 @@ y = labelencoder_y.fit_transform(y)
 print("CATEGORICAL y",y)
 
 # Splitting Data into Training & Testing
-from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state = 0)
 
 print("PRE-SCALED VALUES")
 print(X_train)
